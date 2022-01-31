@@ -9,15 +9,17 @@ Uppercase vowels are still vowels.
 */
 
 function hasMoreVowels(word) {
+    let wordToCheck = word.toLowerCase()
     let vowels = ['a','e','i','o','u']
     let numVowels = 0
-    for(let i in word) {
-        if (vowels.includes(word[i])) {
+    for(let i in wordToCheck) {
+        if (vowels.includes(wordToCheck[i])) {
             numVowels += 1
         }
     }
-    return numVowels > word.length / 2
+    return numVowels > wordToCheck.length / 2
 }
 
 console.log(hasMoreVowels('moose'))
 console.log(hasMoreVowels('yay'))
+console.log(hasMoreVowels('Aal'))
